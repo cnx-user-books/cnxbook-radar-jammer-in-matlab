@@ -1,0 +1,44 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Method of Active Deceptive Jamming</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>48043603-8b42-4c46-ac0a-04e0e00cc1ca</md:uuid>
+</metadata>
+
+  <content>
+<section id="jam3_section">
+<title>Active, Deception Jamming: </title>
+          <para id="jam3_intro">
+ A radar detector detects radar, and then transmits a frequency corresponding to a given (legal) speed.  This frequency is read by the radar detector, which mistakes it for the Doppler shifted echo off of the car, and gives it a fake reading of whatever speed the jammer prefers.  This method requires that the jammer knows the EXACT frequency that the cops are transmitting.
+</para>
+<para id="jam3_adv">
+<list id="jam3_advlist">
+	    <title>Advantages</title>
+	    <item>It is not detected by the radar gun as jamming.</item> 
+	    <item>Works very well if one knows the frequency which the cops are using (which is a given for the X and K bands).  Radar detectors operating in the Ka band can use any number of different frequencies.  Some deception jammers are actually sophisticated enough to read a (fixed) Ka frequency and then transmit the appropriate jamming frequency; however, due to constant FCC crackdowns on jammer manufacturers, these are very difficult to find.</item>
+	  </list>
+</para>
+<para id="jam3_dis">
+<list id="jam3_dislist">
+	    <title>Disadvantages</title>
+	    <item>Still just as illegal as all active jammers, with the same penalties</item> 
+	    <item>Once again, if the radar gun is well built and faster than the jammer device, it can get a reading of a car’s speed before the jammer turns on.  </item> 
+	    <item>Many modern day Ka band radar guns switch rapidly between many different frequencies, foiling all deception jammers since they cannot determine which frequency to transmit</item>
+	  </list>
+</para>
+</section>
+<section id="examples">
+<title>Example</title>
+<para id="example">
+Say we want to send the signal sent to read that we were actually driving a (legal) 55 mph.  Then our jammer outputs a false peak at a frequency corresponding to 55 mph:
+<figure id="deceptive">
+	<media id="idm175008" alt=""><image src="../../media/deceptivejam.gif" mime-type="image/gif"/></media>
+</figure>
+This causes the radar gun’s matched filter to incorrectly output 55 mph:
+<figure id="deceptiveresult">
+	<media id="idp361376" alt=""><image src="../../media/deceptiveresult.gif" mime-type="image/gif"/></media>
+</figure>
+Thus, the radar reads the 100mph car’s speed as actually 55 mph.
+</para>
+</section>
+  </content>
+  
+</document>

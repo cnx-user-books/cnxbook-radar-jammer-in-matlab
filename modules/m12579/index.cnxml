@@ -1,0 +1,71 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Method of Active Noise Jamming</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>ea1a89a1-8c20-4190-8eaa-805c17c7cc6a</md:uuid>
+</metadata>
+
+  <content>
+     <para id="jammer_intro">
+There are several different methods of jamming available, all with their own strengths and weaknesses.  One of these is active noise jamming explained below.
+</para>
+        <section id="jam1_section">
+        <title>Active, Continuous Noise Jamming:</title>
+          <para id="jam1_intro">
+Continuously broadcasts white noise of high amplitude, causing radar guns to read random numbers, preventing a reading of the actual speed of the car.  The radar gun takes about 8 measurements of speed, and only outputs a speed if the 8 measurements agree.
+</para>
+<para id="jam1_adv">
+<list id="jam1_advlist">
+	    <title>Advantages</title>
+	    <item>Always works except sometimes at VERY close range</item>
+	    <item>Very easy to build and operate, since it is always on</item>
+	  </list>
+</para>
+<para id="jam1_dis">
+<list id="jam1_dislist">
+	    <title>Disadvantages</title>
+	    <item>Very Illegal: Jamming or attempting to jam a police radar gun is a federal felony punishable by fines up to $75,000 and one year in jail.</item>
+            <item>Very easy to detect, since you are broadcasting a loud signal to everyone around.  Most modern radar guns have detectors for these signals, alerting the cop when he is being jammed in this manner.</item>
+<item>	Radar detectors will not work, since your own jammer is constantly broadcasting radar anyhow.</item>
+            <item>The cops can shoot an anti-speeder missile which homes in on your jamming signal.</item>
+	  </list>
+</para>
+</section>
+          <section id="jam2_section">
+          <title>Active, Selective Noise Jamming:</title>
+<para id="jam2_intro">
+This is a variation on how the Active Noise Jammer is used.  This is not continually on, as the implementation above is.  Instead, a radar detector detects radar, and then triggers the active jammer described above for several seconds while the driver slows down to a legal speed.  The jammer then shuts off.</para>
+<para id="jam2_note">
+<emphasis>Note:</emphasis> this requires that the jammer operate faster than the radar gun, so that the jamming signal is outputted before the reading is complete.</para>
+<para id="jam2_adv">
+<list id="jam2_advlist">
+	    <title>Advantages</title>
+	    <item>Works most of the time.</item> 
+	    <item>Less likely to be detected by jammer detectors, since it is on for a shorter period of time, and since it will be on only when the cop’s radar gun is transmitting.  Many radar guns’ jammer detectors do not work when the gun is transmitting, because it reads the radar being transmitted by the gun itself.</item> 
+	    <item>The anti-speeder missile described above will not work.</item>
+	  </list>
+</para>
+<para id="jam2_dis">
+<list id="jam2_dislist">
+	    <title>Disadvantages</title>
+	    <item>Just as illegal as continuous active jammers, with the same penalties</item> 
+	    <item>If the radar gun is well built and faster than the jammer device, it can get a reading of a car’s speed before the jammer turns on</item> 
+	    <item>Some more modern DSP radar guns can detect radar jamming even when the gun is transmitting</item>
+	  </list></para>
+</section>
+<section id="examples">
+<title>Example</title>
+<para id="example">
+Both jammers above work the same but differ in when and how long they are broadcast.  Now we output tons of noise at all frequencies, filling the spectrum up like this:
+   <figure id="continuousjam">
+	<media id="idp592032" alt=""><image src="../../media/continuousjam.gif" mime-type="image/gif"/></media>
+    </figure>
+As is easily seen, the true peaks are completely lost in a noisy haze.  This causes the radar gun’s matched filter to look something like this:
+   <figure id="jam_effect">
+	<media id="idp9792080" alt=""><image src="../../media/continuousresult.gif" mime-type="image/gif"/></media>
+    </figure>
+Thus, the radar gun outputs go crazy, and no believable result is found.  Since a radar gun requires 8 subsequent readings to all output the same velocity before making a measurement, this prevents the guns from making any measurement whatsoever.
+</para>
+</section>
+  </content>
+
+  
+</document>

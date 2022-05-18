@@ -1,0 +1,36 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Radar Jammer Project Introduction</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>012469b8-0daa-4f44-88b4-b388e6419526</md:uuid>
+</metadata>
+
+  <content>
+<section id="objective_section">
+<title>Project Objective</title>
+    <para id="objective">
+The basic objective was to design a program in Matlab that simulates how police radar guns work and various methods of how to jam those radar signals.  Simulation is split into three separate programs that each generated a signal or value that results from some analysis of a provided target.
+</para>
+<para id="car"><title>CAR</title>
+
+Generates the spectrum of the speed beam reflected off of a stationary landscape and moving vehicle.
+</para>
+<para id="police"><title>POLICE</title>
+
+Analyzes the reflected spectrum from the vehicle, removes the original speed beam frequency and then uses a match filter to determine the speed that the remaining frequencies represent.
+</para>
+<para id="jam"><title>JAM</title>
+
+Outputs a modified version of the spectrum emitted from the car so as to fool the match filter in the Police Program.  There are several differently implemented versions of jam.
+</para>
+</section>
+<section id="theory_section">
+<title>Theory of the basic operation</title>
+<para id="theory">One of the basic operating theory behind this simulation of speed guns is that of the Doppler Effect.  We assume the outgoing beam Gaussian and propagates towards a moving vehicle and surrounding objects that are stationary.  Each surrounding object will reflect the Gaussian beam with no frequency shift according to the Doppler Effect.  The gun then reads in the reflected waves and gets a combined signal at, ideally, two different frequencies: the reflection from nonmoving objects, and the frequency from the moving object.  Using some signal analysis, the gun then determines how large the frequency shift was and from that, calculates the speed of the vehicle.  The reason this works is that the frequency shift and the speed of the vehicle are proportional.
+</para>
+<para id="theory2">
+The process of jamming requires knowledge of how the gun determines these frequency shifts.  More than likely it will use a matched filter, so the point of the 'jammers' is to manipulate this calculation to give the wrong answer.  A 'jammer' works by outputting a signal at a frequency that will overshadow any reflections from the car.
+</para>
+</section>
+
+</content>
+  
+</document>

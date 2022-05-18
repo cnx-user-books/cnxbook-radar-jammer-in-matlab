@@ -1,0 +1,34 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>A police gun radar and how it works</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>895bf1c0-dac5-4bfc-b02c-fb04b7766813</md:uuid>
+</metadata>
+
+  <content>
+<section id="doppler_section">
+<title>Police Simulation</title>
+    <para id="doppler_police">
+The police simulation simulates the function of the radar gun translating the received spectrum into a speed estimate.  The police program takes in the sent frequency and the spectrum from the car or the jammed signal.  With this, the police program can reconstruct the unshifted, attenuated reflection of the pulse from the background and reflected signal to obtain a spectrum.  Using a matched filter, the simulation shifts through the frequency spectrum and compares to the Gaussian pulse to the received spectrum using the inner product to produce a vector of comparison values.  The maximum index of the vector can be interpreted as the shifted freqnecy, and using this value, the speed of the car can be computed.  The final output of the police gun is the estimated velocity of the car, which is the original frequency over the recieved frequency, multiplied by the speed of light.
+</para>
+<para id="another">
+For the program simulations, this velocity can be compared to the original input to the car simulation to check the accuracy of the police program, as well as the relative effectiveness of the various jamming methods.
+</para>
+</section>
+<section id="example">
+<title>Example</title>
+<para id="doppler_example">
+Let's suppose that the frequency of the pulse was 1GHz.  Figure 1 shows what the spectrum of the police gun is.  The pulse is centered around 0.
+   <figure id="police_spectrum">
+	<media id="idp6810752" alt=""><image src="../../media/police_spectrum.gif" mime-type="image/gif"/></media>
+    </figure>
+Figure 2 shows a doppler effect of the signal reflected back.  The first spike is the reflected, non-shifted surroundings portion, and the second, smaller spike is the Doppler shifted portion, which is reflected off of the car.  We have a certain amount of background noise that is added to the signal.
+   <figure id="doppler_spectrum">
+	<media id="idp7494128" alt=""><image src="../../media/doppler_spectrum.gif" mime-type="image/gif"/></media>
+    </figure>
+The radar gun does recognize the non-shifted part, and strips it off, leaving only the shifted part, shown in figure 3:
+   <figure id="match_filter_pic">
+	<media id="idp10584048" alt=""><image src="../../media/match_filter.gif" mime-type="image/gif"/></media>
+    </figure>
+</para>
+</section>
+  </content>
+</document>

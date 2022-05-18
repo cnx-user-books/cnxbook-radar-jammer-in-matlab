@@ -1,0 +1,63 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Method of Passive Jamming</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>b0088680-9353-4d22-889e-50b153a00d90</md:uuid>
+</metadata>
+
+  <content>
+<section id="jam4_section">
+<title>Passive Jammers:</title>
+          <para id="jam4_intro">
+  These devices re-radiate the radar signal after distorting it (adding noise and/or shifting frequency) in such a way the true target reflection is masked by the distorted signal. A passive jammer does not generate or amplify a signal, only channel or redirect the radar signal (after distorting) back toward the radar. 
+</para>
+<para id="jam4_adv">
+<list id="jam4_advlist">
+	    <title>Advantages</title>
+	    <item>Legal in most states.</item> 
+	  </list>
+</para>
+<para id="jam4_dis">
+<list id="jam4_dislist">
+	    <title>Disadvantages</title>
+	    <item>Certain states (including California, Utah, Minnesota, Ohio, Indiana and Oklahoma) have laws prohibiting any jamming device</item> 
+	    <item>The large antennas required to absorb the incident radar beams can actually increase your car’s visibility to radar detectors, allowing them to get a reading from a larger distance than otherwise possible.</item> 
+	    <item>For this method to work the jammer (distorted signal) power must be as large as or greater than target reflected power -- the jammer antenna would need to capture well over half of all the radar energy striking the target (a very large jammer antenna), and be aligned to the radar antenna. To date all known passive jammers have had no effect on any radar under any circumstances. </item>
+	  </list>
+</para>
+</section>
+<section id="example">
+<title>Example</title>
+<para id="passive">
+Now here is an example of a passive jammer that slightly shifts the frequency of incoming radar.  Thus, the reflection from a car equipped with this sort of passive jammer will have three peaks:
+<figure id="peaks1">
+	<media id="idp2544768" alt=""><image src="../../media/threepeaks.gif" mime-type="image/gif"/></media>
+    </figure>
+This causes the radar detector matched filter to output this:
+    <figure id="passivework">
+	<media id="idp307280" alt=""><image src="../../media/passivework.gif" mime-type="image/gif"/></media>
+    </figure>
+Thus, the passive jammer has foiled the police without ever transmitting any energy of its own.  In this case, the cop incorrectly read the car’s speed as 62 mph, instead of the real 100 mph.  However, in practice, a passive jammer NEVER works.  The reason for this is that for the passive jammer to work it must reflect over 50% of the light.  An example of this is shown below.  This 
+is a Passive Jammer which reflects 60% of the light incident on the car: 
+    <figure id="peaks2">
+	<media id="idp2125200" alt=""><image src="../../media/threepeaks.gif" mime-type="image/gif"/></media>
+    </figure>
+    <figure id="work">
+	<media id="idp2339728" alt=""><image src="../../media/passivework.gif" mime-type="image/gif"/></media>
+    </figure>
+In this case, the matched filter reads the jammer signal instead of the real Doppler shifted signal.  Now, observe what happens when the passive jammer only reflects 40% of the signal incident on the car:
+    <figure id="peaks3">
+	<media id="idp1118320" alt=""><image src="../../media/threepeaks.gif" mime-type="image/gif"/></media>
+    </figure>
+    <figure id="nowork">
+	<media id="idm5849200" alt=""><image src="../../media/passivenowork.gif" mime-type="image/gif"/></media>
+    </figure>
+Thus, when the passive jammer only reflects 40% of the incident beam, it does not work at all.  The police still correctly read the speed of the car at 100mph.  This is summed up by the graph below:
+    <figure id="percentages">
+	<media id="idp1154576" alt=""><image src="../../media/percentage.gif" mime-type="image/gif"/></media>
+    </figure>
+This graph shows that if the passive jammer does not pick up at least 50% of the incoming beam, it does not work at all, the police still correctly read a speed of ~100 mph.  Since cars are much larger than the jammer antenna, in practice the passive jammer can never reflect much more than 10% of the incident beam.  Thus, passive jammers NEVER work.
+</para>
+</section>
+  </content>
+
+  
+</document>

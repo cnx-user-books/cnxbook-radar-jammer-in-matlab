@@ -1,0 +1,28 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Radar Jammer Project Conclusion</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>53ba44c8-9d8c-4ecd-a204-c38aba0338b3</md:uuid>
+</metadata>
+
+  <content>
+<section id="conclusion">
+<title>Conclusions to our simulation observations</title>
+    <para id="passive"><title>Passive Jamming</title>
+
+Passive Jamming is the only legal form of radar gun jamming, as it does not output any type of radiation into space.  Through our simulations though, it shows that at least half the signal must be absorbed in order to fool the police gun radar.  In real life, most vehicles can only absorb up to 40% of the signal so it would not work most of the time.  It would also be very expensive to implement.
+    </para>   
+    <para id="active"><title>Active Noise Jamming</title>
+
+Active Noise Jamming is an illegal form of radar gun jamming because it adds radio waves into the air.  This method works in that it will definitely keep the police radar from correctly reading the original speed of the car.  However, in real life, blaring loud signals requires a massive amount of energy (equivalent to turning your car into a mini broadcast tower).  Also, anyone with the proper equipment would be able to determine which car was blaring these signals.  The method of active selective noise jamming would be more efficient except that it becomes a test of quickness.  First it must detect the police radar and then immediately emit loud noises BEFORE the other device can get a reading.  Implementing something with such a fast response would be difficult.
+    </para>   
+    <para id="deceptive"><title>Deceptive Jamming</title>
+
+Deceptive Jamming is another illegal form of radar gun jamming because it too adds radio waves into the air.  This method is similar to Active Selective Noise Jamming in that it must detect police radar and emit signals before the police radar can get a reading.  Another problem with this method is that the jammer would need to know the frequency of the Gaussian pulse sent by the police radar.  This would be hard to predict because the band of possible radio frequencies is broad.  These are listed below in Figure 1:
+   <figure id="jam_effect">
+	<media id="idp2300672" alt=""><image src="../../media/range.gif" mime-type="image/gif"/></media>
+    </figure>
+Even being off by a few Hz would be enough to allow the police gun to get a correct reading on the real speed of the car, thus wasting the effort of the deceptive jamming.
+    </para>
+</section>   
+  </content>
+  
+</document>

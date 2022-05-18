@@ -1,0 +1,25 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Angle dependencies of speed detection</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>7af197bb-aa7f-4758-8ca0-b739d5789c26</md:uuid>
+</metadata>
+
+  <content>
+    <para id="radar_guns">
+A radar gun can only read the portion of the speed which is parallel to the beam.  Thus, at different angles, we will get different Doppler shifts and different speed readings as shown below:
+<figure id="angle0">
+	<media id="idm7848784" alt=""><image src="../../media/noangle.gif" mime-type="image/gif"/></media>
+</figure>
+<figure id="angle30">
+	<media id="idm104000" alt=""><image src="../../media/angle30.gif" mime-type="image/gif"/></media>
+</figure>
+<figure id="angle60">
+	<media id="idm7908944" alt=""><image src="../../media/angle60.gif" mime-type="image/gif"/></media>
+</figure>
+<figure id="angle90">
+	<media id="idm7526496" alt=""><image src="../../media/angle90.gif" mime-type="image/gif"/></media>
+</figure>
+As shown above, the closer the angle is to 90, the less visible the peak of the second pulse that is reflected back.  That is why a radar gun has to be shot within a specific angle range to get accurate readings.
+    </para>
+  </content>
+  
+</document>
